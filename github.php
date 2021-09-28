@@ -1,9 +1,3 @@
 <?php
-
-// Use in the “Post-Receive URLs” section of your GitHub repo.
-
-if ( $_POST['payload'] ) {
-shell_exec( ‘cd /var/www/html/assemblerCodes/ && git reset –hard HEAD && git pull’ );
-}
-
-?>hi
+$out = shell_exec("/usr/bin/git pull 2>$1");
+var_dump($out);
