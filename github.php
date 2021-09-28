@@ -1,3 +1,4 @@
 <?php
-$out = shell_exec("/usr/bin/git pull 2>$1");
+$out = shell_exec("cd /var/www/html/assemblerCodes  && git reset –hard HEAD && git pull");
 var_dump($out);
+
